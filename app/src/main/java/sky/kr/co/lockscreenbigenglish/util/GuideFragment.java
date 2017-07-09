@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package sky.kr.co.lockscreenbigenglish;
+package sky.kr.co.lockscreenbigenglish.util;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -23,6 +23,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import sky.kr.co.lockscreenbigenglish.R;
 
 /**
  * Created by chenupt@gmail.com on 2015/1/31.

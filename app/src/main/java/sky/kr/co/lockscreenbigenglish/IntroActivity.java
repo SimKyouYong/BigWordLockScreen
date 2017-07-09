@@ -7,6 +7,7 @@ import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
+import sky.kr.co.lockscreenbigenglish.common.Check_Preferences;
 import sky.kr.co.lockscreenbigenglish.common.CommonUtil;
 
 
@@ -41,8 +42,16 @@ public class IntroActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(IntroActivity.this, IntroduceActivity.class);
-                startActivity(intent);
+                if (Check_Preferences.getAppPreferences(IntroActivity.this , "Introduce_FLAG").equals("")){
+                    //처음
+                    Intent intent = new Intent(IntroActivity.this, IntroduceActivity.class);
+                    startActivity(intent);
+                }else{
+                    //회원가입 함
+                    Intent intent = new Intent(IntroActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
+
             }
         }, 1000);
     }
